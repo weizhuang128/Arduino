@@ -59,7 +59,7 @@ void loop()
     Serial.print( temperature, 1 );
     Serial.print( " deg. C, H = " );
     Serial.print( humidity, 1 );
-    Serial.println( "%" );
+    Serial.println( " %" );
   }
 
 
@@ -71,6 +71,6 @@ void loop()
     lcd.setCursor(0,2);
     lcd.print("Temp ");
     lcd.print(temperature,1);
-    lcd.print("deg. C");
+    lcd.print(" deg. C");
   //delay(1);
 }
