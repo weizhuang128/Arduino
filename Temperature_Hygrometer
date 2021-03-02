@@ -48,7 +48,7 @@ void loop()
 {
 
 
-float temperature;
+  float temperature;
   float humidity;
 
   /* Measure temperature and humidity.  If the functions returns
@@ -62,17 +62,15 @@ float temperature;
     Serial.println( "%" );
   }
 
-//lcd.print( humidity);
 
-  // Display Temperature in C
   lcd.setCursor(0, 0);
-  lcd.print("humidity       ");
-  // Display Temperature in F
-  //lcd.print("Temp         F  ");
-  lcd.setCursor(10, 0);
-  // Display Temperature in C
- // lcd.print(tempC);
-  // Display Temperature in F
-lcd.print( humidity);
-  delay(10);
+  lcd.print("Humidity ");
+  lcd.print(humidity,1);
+  lcd.print( "%" );
+
+    lcd.setCursor(0,2);
+    lcd.print("Temp ");
+    lcd.print(temperature,1);
+    lcd.print("deg. C");
+  //delay(1);
 }
